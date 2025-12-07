@@ -8,7 +8,7 @@ model = YOLO("yolov8n.pt")
 frame = cv2.imread("gatos.jpg")  
 results = model(frame)  
   
-detecciones = []  
+
 for r in results[0].boxes:  
     obj = {  
         "clase": model.names[int(r.cls)],  
